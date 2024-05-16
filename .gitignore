@@ -5,3 +5,6 @@ Emacs/.emacs.d/projects
 Emacs/.emacs.d/recentf
 Emacs/.emacs.d/transient
 Emacs/.emacs.d/auto-save-list
+Emacs/.emacs.d/eln-cache/
+Emacs/.emacs.d/emacs-backup/
+Emacs/.emacs.d/savehist
