@@ -57,8 +57,8 @@
 (use-package move-dup
   :ensure t
   :config
-  (global-set-key [M-up] 'move-dup-move-lines-up)
-  (global-set-key [M-down] 'move-dup-move-lines-down)
+  ;; (global-set-key [M-up] 'move-dup-move-lines-up)
+  ;; (global-set-key [M-down] 'move-dup-move-lines-down)
   (global-set-key [M-S-up] 'move-dup-move-lines-up)
   (global-set-key [M-S-down] 'move-dup-move-lines-down)
 

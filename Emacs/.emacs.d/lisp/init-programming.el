@@ -61,6 +61,8 @@
 (require 'init-python)
 (require 'init-rust)
 (require 'init-go)
+(require 'init-elisp)
+(require 'init-slime)
 
 (provide 'init-programming)
 ;;; init-programming.el ends here
