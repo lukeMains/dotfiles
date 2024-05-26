@@ -1,0 +1,12 @@
+# Emacs
+elpa/
+transient/
+auto-save-list/
+eln-cache/
+emacs-backup/
+tree-sitter/
+server
+projects
+recentf
+savehist
+custom.el
