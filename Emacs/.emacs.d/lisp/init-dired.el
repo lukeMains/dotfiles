@@ -20,9 +20,5 @@
   (diredfl-global-mode)
   (require 'dired-x))
 
-(use-package diff-hl
-  :ensure t
-  :hook (dired-mode . dired-diff-hl-mode))
-
 (provide 'init-dired)
 ;;; init-dired.el ends here

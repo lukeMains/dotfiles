@@ -2,26 +2,10 @@
 ;;; Commentary:
 ;;; Code:
 
-;; Git Blame
-(use-package git-blamed
+;; Show changed lines for a file off to the side (green for added, red for
+;; removed etc...)
+(use-package diff-hl
   :ensure t)
-
-;; Like code lens for vs-code
-(use-package blamer
-  :ensure t
-  :bind (("s-i" . blamer-show-commit-info)
-         ("C-c i" . blamer-show-posframe-commit-info))
-  :defer 20
-  :custom
-  (blamer-idle-time 0.3)
-  (blamer-min-offset 70)
-  :custom-face
-  (blamer-face ((t :foreground "#7a88cf"
-                    :background nil
-                    :height 110 ;; TODO: make this match custom font size
-                    :italic t)))
-  :config
-  (global-blamer-mode 1))
 
 ;; Major modes for .gitignore, .gitconfig, etc. files
 (use-package git-modes
