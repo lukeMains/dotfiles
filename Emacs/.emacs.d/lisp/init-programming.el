@@ -63,6 +63,7 @@
 (require 'init-go)
 (require 'init-elisp)
 (require 'init-slime)
+(require 'init-svelte)
 
 (provide 'init-programming)
 ;;; init-programming.el ends here

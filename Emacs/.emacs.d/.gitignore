@@ -10,3 +10,11 @@ projects
 recentf
 savehist
 custom.el
+tramp
+projectile-bookmarks.eld
+
+# Emacs Temporary Files
+*~
+*.elc
+\#*\#
+.\#*

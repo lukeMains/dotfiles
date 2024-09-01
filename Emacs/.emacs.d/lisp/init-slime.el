@@ -3,10 +3,19 @@
 ;;; Code:
 ;;; Packages:
 
-(use-package slime
+;; (use-package slime
+;;   :ensure t
+;;   :config
+;;   (setq inferior-lisp-program "sbcl")
+;;   (slime-setup '(slime-fancy)))
+
+(use-package sly
   :ensure t
   :config
-  (setq inferior-lisp-program "/usr/local/bin/sbcl"))
+  (setq inferior-lisp-program "sbcl")
+  (eval-after-load 'sly
+    `(define-key sly-prefix-map (kbd "M-h") 'sly-documentation-lookup))
+)
 
 (provide 'init-slime)
 ;;; init-slime.el ends here

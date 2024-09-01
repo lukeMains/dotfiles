@@ -27,7 +27,7 @@
 ;; Code Folding
 (use-package origami
   ; ~/.emacs.d/site-lisp/origami.el/origami.el
-  :load-path "site-lisp"
+  :load-path "site-lisp/origami.el/"
   :bind (("C-c k l" . origami-toggle-fold))
   :config
   (global-origami-mode t))

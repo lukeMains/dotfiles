@@ -26,9 +26,12 @@
          ;; already links to the manual, if a function is referenced there.
          ("C-h F" . #'helpful-function)))
 
+;; Info Updates
 (use-package info-colors
   :ensure t
   :hook (Info-selection . info-colors-fontify-node))
+
+(add-to-list 'Info-directory-list '"~/.local/share/info" t)
 
 (provide 'init-emacs-beginner)
 ;;; init-emacs-beginner.el ends here

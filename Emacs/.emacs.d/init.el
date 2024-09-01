@@ -50,6 +50,8 @@
 (require 'init-direnv)
 (require 'init-editing-utils)
 (require 'init-sound)
+(require 'init-fish)
+(require 'init-latex)
 
 (provide 'init)
 ;;; init.el ends here
