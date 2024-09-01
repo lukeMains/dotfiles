@@ -11,3 +11,6 @@ stow -t "$HOME" Emacs
 
 # Tmux
 stow -t "$HOME" tmux
+
+# Helix Editor
+stow -t "$HOME/.config/helix" Helix
