@@ -2,9 +2,7 @@
 
 # TODO: check GNU stow is installed
 
-# Alacritty
-# TODO: check .config/alacritty dir exists
-stow -t "$HOME/.config/alacritty" Alacritty
+CONFIG_DIR="$HOME/.config"
 
 # Emacs
 stow -t "$HOME" Emacs
@@ -12,8 +10,14 @@ stow -t "$HOME" Emacs
 # Tmux
 stow -t "$HOME" tmux
 
+# Alacritty
+mkdir -p "$CONFIG_DIR/alacritty"
+stow -t "$CONFIG_DIR/alacritty" Alacritty
+
 # Helix Editor
-stow -t "$HOME/.config/helix" Helix
+mkdir -p "$CONFIG_DIR/helix"
+stow -t "$CONFIG_DIR/helix" Helix
 
 # Fish Shell
-stow -t "$HOME/.config/fish" Fish
+mkdir -p "$CONFIG_DIR/fish"
+stow -t "$CONFIG_DIR/fish" Fish
