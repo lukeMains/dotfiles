@@ -8,3 +8,6 @@ stow -t "$HOME/.config/alacritty" Alacritty
 
 # Emacs
 stow -t "$HOME" Emacs
+
+# Tmux
+stow -t "$HOME" tmux
