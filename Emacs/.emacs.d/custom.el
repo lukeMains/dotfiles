@@ -8,7 +8,7 @@
  '(custom-enabled-themes '(sanityinc-tomorrow-bright))
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
-   '(auctex svelte-mode oragami projectile fish-mode sly zenburn-theme yaml-mode which-key vertico unfill toml-mode symbol-overlay rust-mode rainbow-mode rainbow-delimiters page-break-lines orderless nyan-mode multiple-cursors move-dup minions markdown-mode marginalia magit-todos json-mode jinx info-colors ibuffer-vc highlight-indent-guides helpful gruvbox-theme go-mode git-modes git-blamed fullframe exec-path-from-shell envrc elisp-slime-nav diredfl dimmer diff-hl default-text-scale corfu-terminal consult-eglot color-theme-sanityinc-tomorrow blamer auto-virtualenv anzu))
+   '(ibuffer-projectile auctex svelte-mode oragami projectile fish-mode sly zenburn-theme yaml-mode which-key vertico unfill toml-mode symbol-overlay rust-mode rainbow-mode rainbow-delimiters page-break-lines orderless nyan-mode multiple-cursors move-dup minions markdown-mode marginalia magit-todos json-mode jinx info-colors ibuffer-vc highlight-indent-guides helpful gruvbox-theme go-mode git-modes git-blamed fullframe exec-path-from-shell envrc elisp-slime-nav diredfl dimmer diff-hl default-text-scale corfu-terminal consult-eglot color-theme-sanityinc-tomorrow blamer auto-virtualenv anzu))
  '(safe-local-variable-values '((Package . SDRAW)))
  '(tool-bar-mode nil))
 (custom-set-faces

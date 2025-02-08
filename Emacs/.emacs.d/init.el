@@ -36,6 +36,7 @@
 (require 'init-ui)
 (require 'init-whitespace)
 (require 'init-code-folding) ; TODO: add origami keybindings
+(require 'init-projectile)
 (require 'init-programming) ; Loads each lisp/init-<lang>.el file.
 (require 'init-magit)
 (require 'init-vc)
@@ -52,6 +53,7 @@
 (require 'init-sound)
 (require 'init-fish)
 (require 'init-latex)
+(require 'init-xterm) ; Loads init-frame-hooks.el
 
 (provide 'init)
 ;;; init.el ends here

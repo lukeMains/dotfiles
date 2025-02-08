@@ -9,15 +9,15 @@
 
 (use-package auto-virtualenv
   :ensure t
-  :init
-  (use-package pyvenv
-    :ensure t)
+  ;; :init
+  ;; (use-package pyvenv
+  ;;   :ensure t)
   :config
   (add-hook 'python-mode-hook 'pyvenv-mode)
   (add-hook 'python-ts-mode-hook 'pyvenv-mode) ;; FIXME: separate tree-stter logic
   (add-hook 'python-mode-hook 'auto-virtualenv-set-virtualenv)
   (add-hook 'python-mode-hook 'auto-virtualenv-set-virtualenv)
-  ;;(add-hook 'projectile-after-switch-project-hook 'auto-virtualenv-set-virtualenv)  ;; If using projectile
+  (add-hook 'projectile-after-switch-project-hook 'auto-virtualenv-set-virtualenv)  ;; If using projectile
   )
 
 (provide 'init-python)

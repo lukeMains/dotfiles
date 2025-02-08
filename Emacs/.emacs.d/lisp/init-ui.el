@@ -23,8 +23,12 @@
 ;; Remove tool bar icons from menu
 (when (fboundp 'tool-bar-mode)
   (tool-bar-mode -1))
+
 (when (fboundp 'set-scroll-bar-mode)
   (set-scroll-bar-mode nil))
+
+(when (sanityinc/display-non-graphic-p)
+  (menu-bar-mode -1))
 
 ;;; Packages:
 ;; Change global font size easily
