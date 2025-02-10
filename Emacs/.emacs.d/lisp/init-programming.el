@@ -62,6 +62,7 @@
 (require 'init-rust)
 (require 'init-go)
 (require 'init-elisp)
+(require 'init-lisp)
 (require 'init-slime)
 (require 'init-svelte)
 
