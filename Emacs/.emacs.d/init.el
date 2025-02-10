@@ -54,6 +54,7 @@
 (require 'init-fish)
 (require 'init-latex)
 (require 'init-xterm) ; Loads init-frame-hooks.el
+(require 'init-meow)
 
 (provide 'init)
 ;;; init.el ends here
