@@ -9,6 +9,11 @@ if status is-interactive
         fnm env --use-on-cd | source
     end
 
+    # direnv - Automatic environment setup when you `cd <dir>`
+    if command -q direnv
+        direnv hook fish | source
+    end
+
     # pnpm
     set -gx PNPM_HOME "/home/alienmuskox/.local/share/pnpm"
     if not string match -q -- $PNPM_HOME $PATH

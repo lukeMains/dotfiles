@@ -1,0 +1,1 @@
+source "/home/alienmuskox/.deno/env.fish"
