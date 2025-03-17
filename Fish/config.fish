@@ -6,7 +6,7 @@ if status is-interactive
 
     # fnm (fast node manager)
     if command -q fnm
-        fnm env --use-on-cd | source
+        fnm env --version-file-strategy=recursive | source
     end
 
     # direnv - Automatic environment setup when you `cd <dir>`
