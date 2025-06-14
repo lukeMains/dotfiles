@@ -1,5 +1,14 @@
+live_config_reload = true
+
 [window]
 opacity = 0.8
 
+[window.dimensions]
+columns = 40
+lines = 90
+
 [cursor]
 style = "Beam"
+
+[keyboard]
+bindings = [{ key = "N", mods = "Control|Shift", action = "CreateNewWindow" }]
