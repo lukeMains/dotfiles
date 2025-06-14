@@ -1,7 +1,7 @@
 ;;;
 
-(use-package auctex
-  :ensure t
+(use-package tex
+  :ensure auctex
   :config
   (setq TeX-auto-save t)
   (setq TeX-parse-self t)
