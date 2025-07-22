@@ -25,3 +25,6 @@ stow -t "$CONFIG_DIR/fish" --adopt Fish
 # Golang
 mkdir -p "$CONFIG_DIR/go"
 stow -t "$CONFIG_DIR/go" Golang
+
+# Git Config
+stow -t "$HOME" Git
