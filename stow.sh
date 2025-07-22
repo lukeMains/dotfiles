@@ -20,4 +20,4 @@ stow -t "$CONFIG_DIR/helix" Helix
 
 # Fish Shell
 mkdir -p "$CONFIG_DIR/fish"
-stow -t "$CONFIG_DIR/fish" Fish
+stow -t "$CONFIG_DIR/fish" --adopt Fish
