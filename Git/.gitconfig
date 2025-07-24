@@ -3,3 +3,9 @@
 	name = Luke Mains
 [init]
 	defaultBranch = main
+
+[merge]
+conflictStyle = diff3
+
+[alias]
+graph = log --graph --pretty=format:'%C(auto)%h %Cgreen[%cr] %C(bold blue)<%><(8,trunc)%an> %C(yellow)-%C(auto)%d %s'
