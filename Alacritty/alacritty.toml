@@ -1,15 +1,22 @@
 [general]
 live_config_reload = true
 
+[font]
+size = 13
+
+[font.normal]
+family = "Maple Mono NF"
+style = "Light"
+
 [window]
 opacity = 0.8
-
-[window.dimensions]
-columns = 40
-lines = 90
+dimensions = { columns = 120, lines = 30 }
 
 [cursor]
 style = "Beam"
 
 [keyboard]
 bindings = [{ key = "N", mods = "Control|Shift", action = "CreateNewWindow" }]
+
+[env]
+SHELL = "/usr/bin/fish"
