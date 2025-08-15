@@ -1,6 +1,6 @@
 # Helix Config
 
-theme = "everforest_dark"
+theme = "tokyonight_moon"
 
 [editor]
 #line-number = "relative"
