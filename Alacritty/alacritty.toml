@@ -16,7 +16,10 @@ dimensions = { columns = 120, lines = 30 }
 style = "Beam"
 
 [keyboard]
-bindings = [{ key = "N", mods = "Control|Shift", action = "CreateNewWindow" }]
+bindings = [
+  { key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
+  { key = "F11", action = "ToggleFullscreen" },
+]
 
 [env]
 SHELL = "/usr/bin/fish"
