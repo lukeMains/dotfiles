@@ -69,3 +69,16 @@ color = '#ff966c'
 [[colors.indexed_colors]]
 index = 17
 color = '#c53b53'
+
+# Source: https://github.com/alacritty/alacritty/issues/5246#issuecomment-2765912471
+[[hints.enabled]]
+command         = "xdg-open" # On Linux/BSD
+# command       = "open" # On macOS
+# command       = { program = "cmd", args = [ "/c", "start",  "" ] } # On Windows
+hyperlinks      = true
+post_processing = true
+persist         = false
+mouse.enabled   = true
+mouse.mods      = "Control" # "Control|Shift" is my preference
+binding         = { key = "O", mods = "Control|Shift" }
+regex           = "(ipfs:|ipns:|magnet:|mailto:|gemini://|go‐pher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
