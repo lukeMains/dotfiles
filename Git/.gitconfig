@@ -22,3 +22,5 @@ graph = log --graph --pretty=format:'%C(auto)%h %Cgreen[%cr] %C(bold blue)<%><(8
     hyperlinks = true
     hyperlinks-file-link-format = "zed://file/{path}:{line}"
 
+[push]
+	autoSetupRemote = true
