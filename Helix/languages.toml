@@ -58,3 +58,26 @@ formatter = { command = 'deno', args = ["fmt", "-", "--ext", "css"] }
 name = "yaml"
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "yaml"] }
 auto-format = true
+
+[language-server]
+jdtls = { command = "jdtls" }
+language-server = { command = "jdtls", args = [
+  "-data",
+  "/home/alienmuskox/.cache/jdtls/workspace",
+] }
+
+[[language]]
+name = "java"
+scope = "source.java"
+injection-regex = "java"
+file-types = ["java"]
+roots = ["pom.xml", "build.gradle"]
+indent = { tab-width = 2, unit = "  " }
+language-servers = ["jdtls"]
+formatter = { command = "google-java-format", args = ["-"] }
+auto-format = true
+
+[[language]]
+name = "nim"
+formatter = { command = "nimpretty", args = ["--stdin"] }
+auto-format = true
