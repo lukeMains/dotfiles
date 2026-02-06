@@ -81,3 +81,13 @@ auto-format = true
 name = "nim"
 formatter = { command = "nimpretty", args = ["--stdin"] }
 auto-format = true
+
+[[language]]
+name = "latex"
+formatter = { command = 'prettier', args = [
+  "--plugin",
+  "/home/alienmuskox/.cache/deno/npm/registry.npmjs.org/prettier-plugin-latex/2.0.1/dist/prettier-plugin-latex.js",
+  "--parser",
+  "latex-parser",
+] }
+auto-format = true
