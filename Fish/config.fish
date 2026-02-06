@@ -60,3 +60,6 @@ if status is-interactive
         bind -M insert \cr _atuin_search
     end
 end
+
+# Added by LM Studio CLI tool (lms)
+set -gx PATH $PATH /home/alienmuskox/.lmstudio/bin
