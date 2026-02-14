@@ -59,7 +59,18 @@ if status is-interactive
         # bind \cr _atuin_search
         bind -M insert \cr _atuin_search
     end
-end
 
-# Added by LM Studio CLI tool (lms)
-set -gx PATH $PATH /home/alienmuskox/.lmstudio/bin
+    # Added by LM Studio CLI tool (lms)
+    set -gx PATH $PATH /home/alienmuskox/.lmstudio/bin
+
+    # bun
+    set --export BUN_INSTALL "$HOME/.bun"
+    set --export PATH $BUN_INSTALL/bin $PATH
+
+    # . "/home/alienmuskox/.deno/env"
+
+    # . "$HOME/.cargo/env"
+
+    # . "$HOME/.atuin/bin/env"
+
+end
