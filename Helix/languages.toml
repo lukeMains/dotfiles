@@ -59,12 +59,9 @@ name = "yaml"
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "yaml"] }
 auto-format = true
 
-[language-server]
-jdtls = { command = "jdtls" }
-language-server = { command = "jdtls", args = [
-  "-data",
-  "/home/alienmuskox/.cache/jdtls/workspace",
-] }
+[language-server.jdtls]
+command = "jdtls"
+args = ["-data", "/home/alienmuskox/.cache/jdtls/workspace"]
 
 [[language]]
 name = "java"
@@ -91,3 +88,27 @@ formatter = { command = 'prettier', args = [
   "latex-parser",
 ] }
 auto-format = true
+
+[[language]]
+name = "svelte"
+formatter = { command = 'deno', args = ['fmt', '--unstable-component'] }
+auto-format = true
+
+[[language]]
+name = "kotlin"
+language-servers = ["kotlin-lsp"]
+# NOTE: ktlint is cool because it provides linting checks but when you have incorrect
+# syntax in the kotlin file, it will output nothing and helix will think that the file
+# was formatted correctly and replace the buffer with empty contents.
+# formatter = { command = 'ktlint', args = [
+#   "-F",
+#   "--stdin",
+#   "--log-level",
+#   "none",
+# ] }
+formatter = { command = 'ktfmt', args = ['-'] }
+auto-format = true
+
+[language-server.kotlin-lsp]
+command = "kotlin-lsp"
+args = ["--stdio"]
