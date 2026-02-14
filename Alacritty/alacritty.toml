@@ -2,10 +2,11 @@
 live_config_reload = true
 
 [font]
-size = 13
+size = 11.6
 
 [font.normal]
-family = "Maple Mono NF"
+# family = "Maple Mono NF"
+family = "Maple Mono"
 style = "Light"
 
 [window]
