@@ -13,6 +13,8 @@ if status is-interactive
 
     # Add local programs to path
     set -gx PATH "$HOME/.local/bin" $PATH
+    set -gx PATH "$HOME/Tools/nim-2.2.7/bin" $PATH
+    set -gx PATH "$HOME/.nimble/bin" $PATH
 
     # TokyoNight Color Palette
     set -l foreground c8d3f5
