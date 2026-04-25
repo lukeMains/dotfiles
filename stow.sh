@@ -28,3 +28,6 @@ stow -t "$CONFIG_DIR/go" Golang
 
 # Git Config
 stow -t "$HOME" Git
+
+mkdir -p "$CONFIG_DIR/ghostty"
+stow -t "$CONFIG_DIR/ghostty" Ghostty

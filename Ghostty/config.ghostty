@@ -1,0 +1,8 @@
+# Config
+
+font-family = "Maple Mono NF"
+font-style = "Light"
+
+background-opacity = 0.8
+
+theme = Ayu
