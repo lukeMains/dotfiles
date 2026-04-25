@@ -74,3 +74,13 @@ if status is-interactive
     # . "$HOME/.atuin/bin/env"
 
 end
+
+# Added by LM Studio CLI tool (lms)
+set -gx PATH $PATH /home/alienmuskox/.lmstudio/bin
+
+# pnpm
+set -gx PNPM_HOME "/home/alienmuskox/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
