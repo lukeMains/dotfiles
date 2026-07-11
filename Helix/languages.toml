@@ -18,18 +18,20 @@ formatter = { command = "taplo", args = ["format", "-"] }
 auto-format = true
 
 [[language]]
-name = "javascript"
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "js"] }
-auto-format = true
-
-[[language]]
 name = "json"
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "json"] }
 
 [[language]]
 name = "markdown"
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "md"] }
+comment-tokens = ["-", "+", "*", "- [ ]", ">"]
 auto-format = true
+
+[[language]]
+name = "javascript"
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "js"] }
+auto-format = true
+language-servers = ["deno-lsp"]
 
 [[language]]
 name = "typescript"
@@ -98,13 +100,21 @@ auto-format = true
 
 [language-server.jdtls]
 command = "jdtls"
-args = ["-data", "/home/alienmuskox/.cache/jdtls/workspace"]
+args = [
+  "-configuration",
+  "/home/alienmuskox/.cache/jdtls",
+  "-data",
+  "/home/alienmuskox/.cache/jdtls/workspace",
+]
+
+[language-server.jdtls.config.java.inlayHints]
+parameterNames.enabled = "all"
 
 [[language]]
 name = "java"
-scope = "source.java"
-injection-regex = "java"
-file-types = ["java"]
+# scope = "source.java"
+# injection-regex = "java"
+# file-types = ["java"]
 roots = ["pom.xml", "build.gradle"]
 indent = { tab-width = 2, unit = "  " }
 language-servers = ["jdtls"]
@@ -149,3 +159,13 @@ auto-format = true
 [language-server.kotlin-lsp]
 command = "kotlin-lsp"
 args = ["--stdio"]
+
+[[language]]
+name = "scheme"
+language-servers = ["steel-language-server"]
+formatter = { command = "raco", args = ["fmt"] }
+auto-format = true
+
+[language-server.steel-language-server]
+command = "steel-language-server"
+args = []
