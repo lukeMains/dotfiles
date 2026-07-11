@@ -23,6 +23,7 @@ bindings = [
 ]
 
 [env]
+TERM = "xterm-256color" # Makes bash have a colorful prompt on most systems
 SHELL = "/usr/bin/fish"
 
 # -----------------------------------------------------------------------------
