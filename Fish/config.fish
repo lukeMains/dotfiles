@@ -1,6 +1,12 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
 
+    # For some reason, the shell is always set to /bin/bash
+    # Need to debug. For now we just set the universal SHELL
+    # variable to fish and unset on startup.
+    set -e SHELL
+    set -gx SHELL (command -v fish)
+
     # fnm (fast node manager)
     if command -q fnm
         fnm env --version-file-strategy=recursive | source
@@ -13,6 +19,7 @@ if status is-interactive
 
     # Add local programs to path
     set -gx PATH "$HOME/.local/bin" $PATH
+
     set -gx PATH "$HOME/Tools/nim-2.2.7/bin" $PATH
     set -gx PATH "$HOME/.nimble/bin" $PATH
 
@@ -63,7 +70,7 @@ if status is-interactive
     end
 
     # Added by LM Studio CLI tool (lms)
-    set -gx PATH $PATH /home/alienmuskox/.lmstudio/bin
+    # set -gx PATH $PATH /home/alienmuskox/.lmstudio/bin
 
     # bun
     set --export BUN_INSTALL "$HOME/.bun"
@@ -75,6 +82,8 @@ if status is-interactive
 
     # . "$HOME/.atuin/bin/env"
 
+    # Racket
+    set -gx PATH "$HOME/.racket/bin" $PATH
 end
 
 # Added by LM Studio CLI tool (lms)
@@ -82,7 +91,9 @@ set -gx PATH $PATH /home/alienmuskox/.lmstudio/bin
 
 # pnpm
 set -gx PNPM_HOME "/home/alienmuskox/.local/share/pnpm"
-if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+if not string match -q -- "$PNPM_HOME/bin" $PATH
+    set -gx PATH "$PNPM_HOME/bin" $PATH
 end
 # pnpm end
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv fish)"
