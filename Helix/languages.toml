@@ -169,3 +169,21 @@ auto-format = true
 [language-server.steel-language-server]
 command = "steel-language-server"
 args = []
+
+# [[language]]
+# name = "sql"
+# language-servers = ["syntaqlite"]
+# formatter = { command = "syntaqlite", args = ["fmt"]}
+# auto-format = true
+
+# [language-server.syntaqlite]
+# command = "syntaqlite"
+# args = ["lsp"]
+
+[[language]]
+name = "sql"
+language-servers = ["syntaqlite"]
+
+[language-server.syntaqlite]
+command = "syntaqlite"
+args = ["lsp"]
