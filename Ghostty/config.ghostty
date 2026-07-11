@@ -6,3 +6,6 @@ font-style = "Light"
 background-opacity = 0.8
 
 theme = Ayu
+
+env=SHELL=/usr/bin/fish
+command = /usr/bin/fish
