@@ -69,14 +69,11 @@ if status is-interactive
         bind -M insert \cr _atuin_search
     end
 
-    # Added by LM Studio CLI tool (lms)
-    # set -gx PATH $PATH /home/alienmuskox/.lmstudio/bin
-
     # bun
     set --export BUN_INSTALL "$HOME/.bun"
     set --export PATH $BUN_INSTALL/bin $PATH
 
-    # . "/home/alienmuskox/.deno/env"
+    # . "$HOME/.deno/env"
 
     # . "$HOME/.cargo/env"
 
@@ -84,16 +81,26 @@ if status is-interactive
 
     # Racket
     set -gx PATH "$HOME/.racket/bin" $PATH
+
+    # Added by LM Studio CLI tool (lms)
+    set -gx PATH $PATH $HOME/.lmstudio/bin
+
+    # pnpm
+    set -gx PNPM_HOME "$HOME/.local/share/pnpm"
+    if not string match -q -- "$PNPM_HOME/bin" $PATH
+        set -gx PATH "$PNPM_HOME/bin" $PATH
+    end
+    # pnpm end
+
+    set BREW_PATH "/home/linuxbrew/.linuxbrew/bin/brew"
+    if test -f "$BREW_PATH"
+        eval "$($BREW_PATH shellenv fish)"
+    end
+    # BEGIN opam configuration
+    # This is useful if you're using opam as it adds:
+    #   - the correct directories to the PATH
+    #   - auto-completion for the opam binary
+    # This section can be safely removed at any time if needed.
+    test -r "$HOME/.opam/opam-init/init.fish" && source "$HOME/.opam/opam-init/init.fish" >/dev/null 2>/dev/null; or true
+    # END opam configuration
 end
-
-# Added by LM Studio CLI tool (lms)
-set -gx PATH $PATH /home/alienmuskox/.lmstudio/bin
-
-# pnpm
-set -gx PNPM_HOME "/home/alienmuskox/.local/share/pnpm"
-if not string match -q -- "$PNPM_HOME/bin" $PATH
-    set -gx PATH "$PNPM_HOME/bin" $PATH
-end
-# pnpm end
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv fish)"
