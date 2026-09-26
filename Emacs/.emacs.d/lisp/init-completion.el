@@ -20,13 +20,6 @@
   (setq-default corfu-quit-no-match 'separator)
   (corfu-popupinfo-mode))
 
-(use-package corfu-terminal
-  :ensure t
-  :after corfu
-  :config
-  (corfu-terminal-mode))
-
-
 ;; Orderless: powerful completion style
 (use-package orderless
   :ensure t
@@ -34,4 +27,5 @@
   (setq completion-styles '(orderless basic)))
 
 (provide 'init-completion)
+
 ;;; init-completion.el ends here
