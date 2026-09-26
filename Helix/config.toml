@@ -1,6 +1,6 @@
 # Helix Config
 
-theme = "tokyonight_moon"
+theme = "ao"
 
 [editor]
 #line-number = "relative"

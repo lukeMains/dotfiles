@@ -19,6 +19,7 @@ auto-format = true
 
 [[language]]
 name = "json"
+auto-format = true
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "json"] }
 
 [[language]]
@@ -31,59 +32,38 @@ auto-format = true
 name = "javascript"
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "js"] }
 auto-format = true
-language-servers = ["deno-lsp"]
+# language-servers = ["deno-lsp"]
 
 [[language]]
 name = "typescript"
-roots = ["deno.json", "deno.jsonc", "package.json"]
-file-types = ["ts", "tsx"]
+# roots = ["deno.json", "deno.jsonc", "package.json"]
+# file-types = ["ts", "tsx"]
+formatter = { command = 'deno', args = ["fmt", "-"] }
 auto-format = true
-language-servers = ["deno-lsp"]
+# language-servers = ["deno-lsp"]
 
-[[language]]
-name = "javascript"
-roots = ["deno.json", "deno.jsonc", "package.json"]
-file-types = ["js", "jsx"]
-auto-format = true
-language-servers = ["deno-lsp"]
+# [[language]]
+# name = "javascript"
+# roots = ["deno.json", "deno.jsonc", "package.json"]
+# file-types = ["js", "jsx"]
+# auto-format = true
+# language-servers = ["deno-lsp"]
 
-[language-server.deno-lsp]
-command = "deno"
-args = ["lsp"]
+# [language-server.deno-lsp]
+# command = "deno"
+# args = ["lsp"]
 
-[language-server.deno-lsp.config.deno]
-enable = true
-unstable = true
-lint = true
-# suggest.imports.hosts = { "https://deno.land" = true }
-inlayHints.parameterNames.enabled = "all"
-inlayHints.parameterTypes.enabled = true
-inlayHints.variableTypes.enabled = true
-inlayHints.propertyDeclarationTypes.enabled  = true
-inlayHints.functionLikeReturnTypes.enabled = true
-inlayHints.enumMemberValues.enabled = true
-
-[[language]]
-name = "jsx"
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "jsx"] }
-auto-format = true
-language-servers = ["deno-lsp-jsx"]
-
-[language-server.deno-lsp-jsx]
-command = "deno"
-args = ["lsp"]
-language-id = "javascriptreact" 
-
-[[language]]
-name = "tsx"
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "tsx"] }
-auto-format = true
-language-servers = ["deno-lsp-tsx"]
-
-[language-server.deno-lsp-tsx]
-command = "deno"
-args = ["lsp"]
-language-id = "typescriptreact" 
+# [language-server.deno-lsp.config.deno]
+# enable = true
+# unstable = true
+# lint = true
+# # suggest.imports.hosts = { "https://deno.land" = true }
+# inlayHints.parameterNames.enabled = "all"
+# inlayHints.parameterTypes.enabled = true
+# inlayHints.variableTypes.enabled = true
+# inlayHints.propertyDeclarationTypes.enabled  = true
+# inlayHints.functionLikeReturnTypes.enabled = true
+# inlayHints.enumMemberValues.enabled = true
 
 [[language]]
 name = "html"
@@ -187,3 +167,8 @@ language-servers = ["syntaqlite"]
 [language-server.syntaqlite]
 command = "syntaqlite"
 args = ["lsp"]
+
+[[language]]
+name = "ocaml"
+formatter = { command = "ocamlformat", args = ["-q", "--name=foo.ml", "-"] }
+auto-format = true
